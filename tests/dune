@@ -15,6 +15,7 @@
     (modules run)
     (libraries
     Tests
+    unix
     )
 )
 (include_subdirs unqualified)
