@@ -1,0 +1,20 @@
+(library
+    (name Tests)
+    (ocamlopt_flags -linkall -g )
+    ; massive overkill, these flags are just to allow not specifying everything
+    ; in a record
+    (flags -w +a-4-6-7-9-27-29-32..42-44-45-48-50-60)
+    (libraries
+        rely.lib
+        rely-dune-test.lib
+    )
+    (modules (:standard \ run))
+)
+(test
+    (name run)
+    (modules run)
+    (libraries
+    Tests
+    )
+)
+(include_subdirs unqualified)
